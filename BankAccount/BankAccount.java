@@ -8,12 +8,12 @@ class BankAccount {
         balance = initialBalance;
     }
 
-    // Wanna see how much dough you got?
+    
     public double getBalance() {
         return balance;
     }
 
-    // Throwing more money in your account
+    
     public void deposit(double amount) {
         if (amount > 0) {
             balance += amount;
@@ -23,13 +23,13 @@ class BankAccount {
         }
     }
 
-    // Time to take some cash out
+    
     public void withdraw(double amount) {
         if (amount > 0 && amount <= balance) {
             balance -= amount;
             System.out.println("Withdrawn: " + amount);
         } else {
-            System.out.println("insufficeint balance");
+            System.out.println("insufficient balance");
         }
     }
 }
@@ -38,13 +38,13 @@ class ATM {
     private BankAccount account;
     private Scanner scanner;
 
-    // ATM needs to know whose cash it's messin' with
+
     public ATM(BankAccount account) {
         this.account = account;
         scanner = new Scanner(System.in);
     }
 
-    // The oh-so-fancy menu
+
     public void displayMenu() {
         System.out.println("\n====== Welcome to the ATM ======");
         System.out.println("1. Check Balance");
@@ -53,7 +53,7 @@ class ATM {
         System.out.println("4. Exit");
     }
 
-    // The main loop - it's like Groundhog Day until you bail
+
     public void run() {
         int option;
         do {
